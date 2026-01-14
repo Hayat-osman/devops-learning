@@ -27,13 +27,17 @@ Successfully completed the networking module assignment by purchasing my own dom
 ### 1. Domain Registration on Cloudflare
 
 · Purchased hayatosman.com through Cloudflare registrar
+
 · Configured nameservers to use Cloudflare's DNS
 
 ### 2. AWS EC2 Instance Setup
 
-· Launched an EC2 instance with Ubuntu 22.04 LTS
-· Selected t2.micro instance type (free tier eligible)
+· Launched an EC2 instance with Ubuntu
+
+· Selected t2.micro instance type
+
 · Created and downloaded a new key pair for SSH access
+
 · Used default VPC and subnet settings
 
 ### 3. Security Group Configuration
