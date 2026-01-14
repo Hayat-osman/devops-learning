@@ -18,23 +18,23 @@ Screenshots
 
 1. My EC2 Server
 
-screenshots/EC2%20INSTANCE%20SUMMARY.png
+Desktop/EC2%20INSTANCE%20SUMMARY.png
 
 2. Security Rules
 
-screenshots/EC2%20SECURITY%20DETAILS.png
+Desktop/EC2%20SECURITY%20DETAILS.png
 
 3. DNS Configuration
 
-screenshots/DNS%20RECORDS.png
+Desktop/DNS%20RECORDS.png
 
 4. NGINX Status
 
-screenshots/TERMINAL.png
+Desktop/TERMINAL.png
 
 5. Live Website
 
-screenshots/WELCOME%20TO%20NGINX.png
+Desktop/WELCOME%20TO%20NGINX.png
 
 Commands I Used (Ubuntu)
 
