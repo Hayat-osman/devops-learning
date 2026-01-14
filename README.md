@@ -1,10 +1,7 @@
-Networking Project: Website with Custom Domain
+# Networking Module Assignment: Domain + EC2 + DNS Setup
 
-Project Goal
-
-Make a website accessible using my own domain name hayatosman.com.
-
-What I Built
+## Project Overview
+Successfully completed the networking module assignment by purchasing my own domain `hayatosman.com`, deploying an NGINX web server on AWS EC2, and configuring DNS to make the website accessible via my custom domain.
 
 I created a complete website setup:
 
