@@ -14,10 +14,10 @@ I created a complete website setup:
 4. Connected hayatosman.com to my server using DNS
 5. Made the website public by opening port 80
 
-## Screenshots
+
 
 ### EC2 Instance
-![EC2 Instance](./networking/EC2%20INSTANCE%20SUMMARY.png)
+![EC2 Instance](./networking/EC2INSTANCESUMMARY.png)
 
 ### Security Groups
 ![Security Groups](./networking/EC2%20SECURITY%20DETAILS.png)
