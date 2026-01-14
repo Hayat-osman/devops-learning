@@ -17,13 +17,13 @@ I created a complete website setup:
 
 
 ### EC2 Instance
-![EC2 Instance](./networking/EC220%INSTANCE20%SUMMARY.png)
+![EC2 Instance](./networking/EC2.png)
 
 ### Security Groups
 ![Security Groups](./networking/EC2%20SECURITY%20DETAILS.png)
 
 ### DNS Records
-![DNS Records](./networking/DNS20%RECORDS.png)
+![DNS Records](./networking/DNS.png)
 
 ### NGINX Status
 ![NGINX Status](./networking/TERMINAL.png)
