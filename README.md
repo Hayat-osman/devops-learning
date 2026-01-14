@@ -60,6 +60,7 @@ sudo systemctl status nginx
 Logged into Cloudflare dashboard and created two A records:
 
 · Record 1: Type A | Name: @ | Content: [My EC2 Public IP] | TTL: Auto
+
 · Record 2: Type A | Name: www | Content: [My EC2 Public IP] | TTL: Auto
 
 
@@ -86,42 +87,53 @@ What I Learned
 1. DNS (Domain Name System)
 
 · DNS is like a phonebook for the internet
+
 · It turns domain names (hayatosman.com) into IP addresses
+
 · A records point directly to IP addresses
 
 2. Ports
 
 · Port 80 is for websites (HTTP)
+
 · Port 22 is for server management (SSH)
+
 · Different services use different ports
 
 3. Cloud Servers
 
 · EC2 is a virtual computer in the cloud
+
 · Public IP = address everyone on internet uses
+
 · Private IP = address only AWS uses internally
 
 4. Security Groups
 
 · Like a firewall for your server
+
 · Controls who can access your server
+
 · I opened port 80 to everyone and port 22 just for me
 
 Challenge I Faced
 
 Problem: My website wasn't loading after setting up DNS
 
-What happened:
-
 · I set up the DNS records for hayatosman.com in Cloudflare
+
 · Waited a few minutes
+
 · Tried to visit hayatosman.com but got an error
 
 How I fixed it:
 
 1. Learned about DNS propagation - it takes time to update everywhere
-2. Used nslookup hayatosman.com to check if DNS was working
+
+2. Used nslookup hayatosman.com to check if DNS was workin
+
 3. Waited about 5 more minutes
+
 4. Refreshed my browser and it worked!
 
 What I learned: DNS doesn't update instantly. It needs time to spread to all internet servers.
