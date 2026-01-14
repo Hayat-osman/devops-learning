@@ -1,5 +1,7 @@
 Networking Module Assignment: Domain + EC2 + DNS Setup
 
+
+
 assignment Overview
 
 Successfully completed the networking module assignment by purchasing my own domain hayatosman.com, deploying an NGINX web server on AWS EC2, and configuring DNS to make the website accessible via my custom domain. This project demonstrates practical application of networking concepts including DNS resolution, IP addressing, routing, firewall configuration, and HTTP protocols.
@@ -127,4 +129,5 @@ What I learned: DNS doesn't update instantly. It needs time to spread to all int
 Final Result
 
 Now when I type hayatosman.com in a browser, it shows the "Welcome to NGINX" page from my AWS server!
+
 
