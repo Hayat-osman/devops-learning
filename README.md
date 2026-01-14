@@ -14,28 +14,22 @@ I created a complete website setup:
 4. Connected hayatosman.com to my server using DNS
 5. Made the website public by opening port 80
 
-Screenshots
+## Screenshots
 
-1. My EC2 Server
+### EC2 Instance
+![EC2 Instance](./networking/EC2%20INSTANCE%20SUMMARY.png)
 
-Desktop/EC2%20INSTANCE%20SUMMARY.png
+### Security Groups
+![Security Groups](./networking/EC2%20SECURITY%20DETAILS.png)
 
-2. Security Rules
+### DNS Records
+![DNS Records](./networking/DNS%20RECORDS.png)
 
-Desktop/EC2%20SECURITY%20DETAILS.png
+### NGINX Status
+![NGINX Status](./networking/TERMINAL.png)
 
-3. DNS Configuration
-
-Desktop/DNS%20RECORDS.png
-
-4. NGINX Status
-
-Desktop/TERMINAL.png
-
-5. Live Website
-
-Desktop/WELCOME%20TO%20NGINX.png
-
+### Live Website
+![Live Website](./networking/WELCOME%20TO%20NGINX.png)
 Commands I Used (Ubuntu)
 
 ```bash
