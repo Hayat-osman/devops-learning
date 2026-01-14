@@ -1,48 +1,48 @@
-Networking Module Assignment: Domain + EC2 + DNS Setup
+# Networking Module Assignment: Domain + EC2 + DNS Setup
 
 
 
-assignment Overview
+## Assignment Overview:
 
 Successfully completed the networking module assignment by purchasing my own domain hayatosman.com, deploying an NGINX web server on AWS EC2, and configuring DNS to make the website accessible via my custom domain. This project demonstrates practical application of networking concepts including DNS resolution, IP addressing, routing, firewall configuration, and HTTP protocols.
 
-Assignment Checklist Completed:
+## Assignment Checklist Completed:
 
-· ✅ Bought a domain: Registered hayatosman.com via Cloudflare
+ ✅ Bought a domain: Registered hayatosman.com via Cloudflare
 
-· ✅ Deployed EC2 instance: Launched Ubuntu server on AWS EC2
+ ✅ Deployed EC2 instance: Launched Ubuntu server on AWS EC2
 
-· ✅ Installed NGINX: Configured and ran NGINX web server
+ ✅ Installed NGINX: Configured and ran NGINX web server
 
-· ✅ Configured DNS: Created A records pointing hayatosman.com to EC2 public IP
+ ✅ Configured DNS: Created A records pointing hayatosman.com to EC2 public IP
 
-· ✅ Allowed HTTP traffic: Security group configured to permit port 80 access
+ ✅ Allowed HTTP traffic: Security group configured to permit port 80 access
 
-· ✅ Testing successful: Website loads NGINX default page via hayatosman.com
+ ✅ Testing successful: Website loads NGINX default page via hayatosman.com
 
-· ✅ Pushed to GitHub: All work documented in this repository
+ ✅ Pushed to GitHub: All work documented in this repository
 
-Step-by-Step Implementation
+## Step-by-Step Implementation
 
-1. Domain Registration on Cloudflare
+### 1. Domain Registration on Cloudflare
 
 · Purchased hayatosman.com through Cloudflare registrar
 · Configured nameservers to use Cloudflare's DNS
 
-2. AWS EC2 Instance Setup
+### 2. AWS EC2 Instance Setup
 
 · Launched an EC2 instance with Ubuntu 22.04 LTS
 · Selected t2.micro instance type (free tier eligible)
 · Created and downloaded a new key pair for SSH access
 · Used default VPC and subnet settings
 
-3. Security Group Configuration
+### 3. Security Group Configuration
 
 Created a security group with the following inbound rules:
 
 · Port 80 (HTTP): Open to 0.0.0.0/0 for public web access
 
-4. NGINX Installation on Ubuntu
+### 4. NGINX Installation on Ubuntu
 
 Connected to my EC2 instance via SSH and installed NGINX:
 
