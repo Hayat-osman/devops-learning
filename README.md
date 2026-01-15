@@ -56,10 +56,10 @@ Logged into Cloudflare dashboard and created two A records:
 
 
 ### EC2 Instance
-![EC2 Instance](./networking/EC2.png)
+![EC2 Instance](./networking/INSTANCE.png)
 EC2 instance showing public IP, private IP, and running state
 ### Security Groups
-![Security Groups](./networking/EC2%20SECURITY%20DETAILS.png)
+![Security Groups](./networking/SECURITY.png)
 Security group allowing HTTP (port 80) and SSH (port 22) access
 ### DNS Records
 ![DNS Records](./networking/DNS.png)
