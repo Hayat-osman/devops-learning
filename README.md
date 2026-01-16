@@ -1,40 +1,28 @@
-Networking Project: Website with Custom Domain
+    # Networking Assignment: Domain + EC2 + DNS set up 
 
-Project Overview
+## Assignment Overview
 
 Successfully completed the networking module assignment by purchasing my own domain hayatosman.com, deploying an NGINX web server on AWS EC2, and configuring DNS to make the website accessible via my custom domain. This project demonstrates practical application of networking concepts including DNS resolution, IP addressing, routing, firewall configuration, and HTTP protocols.
 
-Assignment Checklist Completed:
 
-· ✅ Bought a domain: Registered hayatosman.com via Cloudflare
-· ✅ Deployed EC2 instance: Launched Ubuntu server on AWS EC2
-· ✅ Installed NGINX: Configured and ran NGINX web server
-· ✅ Configured DNS: Created A records pointing hayatosman.com to EC2 public IP
-· ✅ Allowed HTTP traffic: Security group configured to permit port 80 access
-· ✅ Testing successful: Website loads NGINX default page via hayatosman.com
-· ✅ Pushed to GitHub: All work documented in this repository
 
-Step-by-Step Implementation
-
-1. Domain Registration on Cloudflare
+### 1. Domain Registration on Cloudflare
 
 · Purchased hayatosman.com through Cloudflare registrar
-· Configured nameservers to use Cloudflare's DNS
 
-2. AWS EC2 Instance Setup
+### 2. AWS EC2 Instance Setup
 
-· Launched an EC2 instance with Ubuntu 22.04 LTS
-· Selected t2.micro instance type (free tier eligible)
+· Launched an EC2 instance with Ubuntu 
+· Selected t2.micro instance type
 · Created and downloaded a new key pair for SSH access
-· Used default VPC and subnet settings
 
-3. Security Group Configuration
+### 3. Security Group Configuration
 
 Created a security group with the following inbound rules:
 
 · Port 80 (HTTP): Open to 0.0.0.0/0 for public web access
 
-4. NGINX Installation on Ubuntu
+### 4. NGINX Installation on Ubuntu
 
 Connected to my EC2 instance via SSH and installed NGINX:
 
@@ -73,51 +61,18 @@ NGINX default page loading at hayatosman.com
 
 
 
-What I Learned
+## What I Learned
 
-1. DNS (Domain Name System)
+This assignment helped me understand how the internet connects different pieces:
 
-· DNS is like a phonebook for the internet
-· It turns domain names (hayatosman.com) into IP addresses
-· A records point directly to IP addresses
+1. **How DNS works**: I learned that DNS acts like a phonebook. When someone types `hayatosman.com`, DNS servers are responsible for finding and returning the correct IP address for my server.
+2. **Servers and IP Addresses**: I now know that a cloud server (like AWS EC2) has two IPs:
+- A **Public IP** that anyone on the internet can use to find it.
+- A **Private IP** that only other services inside AWS use to talk to it privately.
+3. **Security with Firewalls**: I configured a "Security Group" on AWS, which is like a firewall. I set it to allow website traffic on port 80 and restrict server management to my IP on port 22.
+4. **The Full Journey**: I saw the complete path a website request takes: `Browser -> DNS -> My EC2 Server -> NGINX -> Website Page`.
 
-2. Ports
+## Challenge I Faced
 
-· Port 80 is for websites (HTTP)
-· Port 22 is for server management (SSH)
-· Different services use different ports
+The main challenge was that my website at `hayatosman.com` didn't load right after I set up the DNS. I figured out it was because of DNS propagation—the time it takes for the updated address to spread online. I checked that the server itself was working using its IP address, then waited a few minutes. After that, my custom domain worked perfectly.
 
-3. Cloud Servers
-
-· EC2 is a virtual computer in the cloud
-· Public IP = address everyone on internet uses
-· Private IP = address only AWS uses internally
-
-4. Security Groups
-
-· Like a firewall for your server
-· Controls who can access your server
-· I opened port 80 to everyone and port 22 just for me
-
-Challenge I Faced
-
-Problem: My website wasn't loading after setting up DNS
-
-What happened:
-
-· I set up the DNS records for hayatosman.com in Cloudflare
-· Waited a few minutes
-· Tried to visit hayatosman.com but got an error
-
-How I fixed it:
-
-1. Learned about DNS propagation - it takes time to update everywhere
-2. Used nslookup hayatosman.com to check if DNS was working
-3. Waited about 5 more minutes
-4. Refreshed my browser and it worked!
-
-What I learned: DNS doesn't update instantly. It needs time to spread to all internet servers.
-
-Final Result
-
-Now when I type hayatosman.com in a browser, it shows the "Welcome to NGINX" page from my AWS server!
