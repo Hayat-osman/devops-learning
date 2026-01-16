@@ -41,8 +41,9 @@ sudo systemctl status nginx
 
 Logged into Cloudflare dashboard and created two A records:
 
-· Record 1: Type A | Name: @ | Content: [My EC2 Public IP] | TTL: Auto
-· Record 2: Type A | Name: www | Content: [My EC2 Public IP] | TTL: Auto
+· Record for @ (root domain: hayatosman.com) → [EC2 Public IP]
+
+· Record for www (www.hayatosman.com) → [EC2 Public IP]
 
 
 ### EC2 Instance
