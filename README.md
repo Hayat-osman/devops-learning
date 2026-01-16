@@ -13,7 +13,9 @@ Successfully completed the networking module assignment by purchasing my own dom
 ### 2. AWS EC2 Instance Setup
 
 · Launched an EC2 instance with Ubuntu 
+
 · Selected t2.micro instance type
+
 · Created and downloaded a new key pair for SSH access
 
 ### 3. Security Group Configuration
@@ -35,7 +37,7 @@ sudo systemctl enable nginx
 sudo systemctl status nginx
 ```
 
-5. DNS Configuration
+### 5. DNS Configuration
 
 Logged into Cloudflare dashboard and created two A records:
 
@@ -63,16 +65,23 @@ NGINX default page loading at hayatosman.com
 
 ## What I Learned
 
-This assignment helped me understand how the internet connects different pieces:
+1. **DNS in real use**
 
-1. **How DNS works**: I learned that DNS acts like a phonebook. When someone types `hayatosman.com`, DNS servers are responsible for finding and returning the correct IP address for my server.
-2. **Servers and IP Addresses**: I now know that a cloud server (like AWS EC2) has two IPs:
-- A **Public IP** that anyone on the internet can use to find it.
-- A **Private IP** that only other services inside AWS use to talk to it privately.
-3. **Security with Firewalls**: I configured a "Security Group" on AWS, which is like a firewall. I set it to allow website traffic on port 80 and restrict server management to my IP on port 22.
-4. **The Full Journey**: I saw the complete path a website request takes: `Browser -> DNS -> My EC2 Server -> NGINX -> Website Page`.
+I learned how DNS translates a domain name into an IP address. When someone visits hayatosman.com, DNS resolves the domain and directs the request to the correct server hosting my website.
+
+2. **Servers and IP addresses**
+
+I now understand that an EC2 instance has both a public and a private IP. The public IP allows users on the internet to access the server, while the private IP is used for internal communication within AWS.
+
+3. **Security and traffic control**
+
+I configured AWS security group to control access to my server. HTTP traffic was allowed on port 80 for public access.
+
+4. **End to end request flow**
+
+Seeing the full request path made networking click for me. A request travels from the browser, through DNS, to the EC2 instance, where NGINX serves the web page back to the user.
 
 ## Challenge I Faced
 
-The main challenge was that my website at `hayatosman.com` didn't load right after I set up the DNS. I figured out it was because of DNS propagation—the time it takes for the updated address to spread online. I checked that the server itself was working using its IP address, then waited a few minutes. After that, my custom domain worked perfectly.
+The main challenge was that my website at `hayatosman.com` didn't load right after I set up the DNS. I figured out it was because of DNS propagation. I checked that the server itself was working using its IP address, then waited a few minutes. After that, my custom domain worked perfectly.
 
