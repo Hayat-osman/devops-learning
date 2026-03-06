@@ -19,19 +19,19 @@ First, a DynamoDB table named `students` was created to serve as the data store.
 
 This setup ensures that we only pay for the write operations performed, which is ideal for workloads with unpredictable traffic.
 
-![DynamoDB Table Setup](./Screenshot/DynamoDB.png)
+![DynamoDB Table Setup](./screenshot/DynamoDB.png)
 
 ### 2. IAM Permissions (Least Privilege)
 Before creating the Lambda function, a dedicated IAM execution role was configured to ensure the function only has the permissions it absolutely needs.
 
 The role includes two policies:
 1.  **`AWSLambdaBasicExecutionRole`**: A managed policy that allows the function to write logs to Amazon CloudWatch.
-2.  **`LambdaStudentPutItemPolicy`**: A custom inline policy that grants `dynamodb:PutItem` permission *only* on the `students` table.
+2.  **`LambdaStudentPutItemPolicy`**: A custom inline policy that grants `dynamodb:PutItem` permission *only* on the `student` table.
 
 This approach prevents the function from performing any unauthorized actions.
 
-![IAM Role with Attached Policies](./Screenshot/iam.png)
-![Custom PutItem Policy Details](./Screenshot/policy.png)
+![IAM Role with Attached Policies](./screenshot/iam.png)
+![Custom PutItem Policy Details](./screenshot/policy.png)
 
 ### 3. Lambda Function
 A Python-based Lambda function was created to process incoming requests. The function's logic is as follows:
@@ -41,7 +41,7 @@ A Python-based Lambda function was created to process incoming requests. The fun
 4.  Return a structured JSON success message, including the `id` of the newly created item.
 5.  Includes basic error handling and logging for debugging.
 
-![Lambda Function Code](./Screenshot/Lambdafunction.png)
+![Lambda Function Code](./screenshot/Lambdafunction.png)
 
 ### 4. API Gateway REST API
 Finally, an API Gateway was configured to provide a public HTTP endpoint.
@@ -51,7 +51,7 @@ Finally, an API Gateway was configured to provide a public HTTP endpoint.
 *   **CORS**: Cross-Origin Resource Sharing (CORS) was enabled 
 *   **Deployment**: The API was deployed to a `prod` stage to make it publicly accessible.
 
-![API Gateway Endpoint Configuration](./Screenshot/api.png)
+![API Gateway Endpoint Configuration](./screenshot/api.png)
 
 ---
 
@@ -61,18 +61,18 @@ The entire workflow was tested by sending a `POST` request to the deployed API e
 #### Postman Request
 A successful request was sent with a sample JSON payload, and the API returned a `200 OK` status with the expected success message and the unique ID of the stored item.
 
-![Postman Test Success](./Screenshot/POSTMAN.png)
+![Postman Test Success](./screenshot/POSTMAN.png)
 
 #### DynamoDB Verification
 After the test, the `student` table was checked to confirm that the data was successfully written. The new item, identified by its unique ID, contained the correct payload and timestamp.
 
-![DynamoDB Item Details (JSON)](./Screenshot/DynamoDB-1.png)
-![DynamoDB Table View](./Screenshot/DynamoDB-2.png)
+![DynamoDB Item Details (JSON)](./screenshot/DynamoDB-1.png)
+![DynamoDB Table View](./screenshot/DynamoDB-2.png)
 
 #### CloudWatch Logs
 The CloudWatch logs for the Lambda function were reviewed to confirm successful execution. The logs showed the request and report IDs, along with metrics for execution duration and memory usage, which are crucial for monitoring and debugging.
 
-![CloudWatch Execution Logs](./Screenshot/cloudwatch-logs.png)
+![CloudWatch Execution Logs](./screenshot/cloudwatch-logs.png)
 
 **Learnings:**
 
