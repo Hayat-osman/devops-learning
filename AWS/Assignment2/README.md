@@ -77,3 +77,12 @@ The deployment was verified by accessing the ALB's public DNS name.
 **Health Status:** The target group status showed both registered instances as **Healthy**, confirming they were responding correctly to the ALB's health checks.
 
 ![Healthy Target Group](/AWS/Assignment2/Screenshot%20/Targetgroup.png)
+
+**Learnings:**
+* How an Application Load Balancer distributes traffic to improve application resilience and availability.
+* The importance of health checks for automatically removing unhealthy instances from the target group.
+* The security benefit of placing web servers in private subnets and only allowing traffic from the ALB.
+
+
+* **Challenge:** My EC2 instances were failing their health checks and being marked as "unhealthy."
+* **Solution:** Discovered the security group for the instances wasn't allowing traffic from the ALB on the specified port. Adjusting the inbound rule fixed it.

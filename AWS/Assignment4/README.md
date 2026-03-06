@@ -73,3 +73,14 @@ After the test, the `student` table was checked to confirm that the data was suc
 The CloudWatch logs for the Lambda function were reviewed to confirm successful execution. The logs showed the request and report IDs, along with metrics for execution duration and memory usage, which are crucial for monitoring and debugging.
 
 ![CloudWatch Execution Logs](/AWS/Assignment4/Screenshot/cloudwatch-logs.png)
+
+**Learnings:**
+
+• The core serverless workflow: API Gateway receives a request, triggers a Lambda function, which then interacts with other services like DynamoDB.
+• The critical role of IAM in the serverless model, specifically creating an execution role with least-privilege permissions for Lambda.    
+• How to use CloudWatch Logs to effectively debug Lambda function errors.
+
+
+**Challenge:** My Lambda function was timing out or returning a `502` error through API Gateway.
+
+**Solution:** Checked the CloudWatch Logs and found a permissions error. The Lambda execution role was missing the `dynamodb:PutItem` permission to write to my table. Adding it to the IAM policy resolved the issue.

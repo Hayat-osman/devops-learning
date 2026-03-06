@@ -62,3 +62,11 @@ The deployment was verified through the following tests:
 
 **Cache Invalidation:** An update to `index.html` in S3 was successfully deployed by creating a CloudFront invalidation (`/*`), with changes reflected immediately upon browser refresh.
  ![Cache Invalidation](/AWS/Assignment3/Screenshots/Test.png)
+
+**Learnings:**
+* The power of Amazon S3 for cost-effective and durable static website hosting.
+* How CloudFront not only speeds up content delivery (CDN) but also provides a simple way to add a free SSL certificate.
+* The process of configuring DNS records in Route 53 to point a custom domain to a CloudFront distribution.
+
+* **Challenge:** After uploading new files to S3, the website wasn't showing the changes.
+* **Solution:** Learned about CloudFront caching and had to create an "invalidation" to force the CDN to pull the latest version of the files from S3.

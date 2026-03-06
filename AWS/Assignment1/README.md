@@ -167,4 +167,13 @@ Basic CloudWatch monitoring was enabled for EC2 instances to track:
 ![CloudWatch Monitoring](./Screenshots/Cloudwatch.png)
 
 
+**Learnings:**
+* The critical difference between public and private subnets for security.
+* How route tables explicitly control the flow of traffic to an Internet Gateway or NAT Gateway.
+* The practical function of a Bastion Host for providing secure, controlled access to private resources.
 
+ **Challenges:**
+* **Challenge:** My private EC2 instance couldn't connect to the internet for updates.
+* **Solution:** Realized the private route table was missing a `0.0.0.0/0` route pointing to the NAT Gateway.
+* **Challenge:** I couldn't SSH into the private instance from the Bastion Host.
+* **Solution:** Corrected the private instance's security group to allow inbound SSH traffic specifically from the Bastion Host's security group.
