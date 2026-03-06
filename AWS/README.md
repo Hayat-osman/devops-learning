@@ -28,7 +28,7 @@ This Assignment implements a highly available, two-tier web application architec
 
 This Assignment covers the deployment of a secure, scalable, and high-performance static website using a serverless architecture. The solution leverages S3 for hosting, CloudFront as a global CDN for low-latency content delivery and SSL, and Route 53 for DNS management.
 
-![Architecture Diagram for Assignment 3](./Assignment3/Architecture-diagram-3.png)
+![Architecture Diagram for Assignment 3](./Assignment3/Architecturediagram-3.png)
 
 **[➡️ View Assignment Details](./Assignment3/README.md)**
 
