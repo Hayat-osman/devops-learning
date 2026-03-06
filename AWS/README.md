@@ -34,7 +34,7 @@ This Assignment covers the deployment of a secure, scalable, and high-performanc
 
 ---
 
-### 4. Assignment 4: Serverless API with Lambda, IAM, and API Gateway
+### Assignment 4: Serverless API with Lambda, IAM, and API Gateway
 
 This Assignment demonstrates a hands-on, production-like serverless workflow on AWS. The goal was to build a simple REST API that accepts a `POST` request, processes it with a Lambda function, and stores the data in a DynamoDB table, following the principle of least privilege for IAM permissions.
 
