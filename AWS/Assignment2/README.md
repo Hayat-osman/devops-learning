@@ -1,6 +1,6 @@
-## 1. Architecture Overview
+## Overview
 
-This project implements a highly available, two-tier web application architecture on AWS. The design uses an Application Load Balancer (ALB) to distribute traffic across two EC2 instances deployed in private subnets across multiple Availability Zones. This ensures the backend instances are isolated from direct internet traffic, enhancing security and resilience.
+This Assignment implements a highly available, two-tier web application architecture on AWS. The design uses an Application Load Balancer (ALB) to distribute traffic across two EC2 instances deployed in private subnets across multiple Availability Zones. This ensures the backend instances are isolated from direct internet traffic, enhancing security and resilience.
 
 ![Architecture Diagram](/AWS/Assignment2/Architecture-diagram-2.png)
 

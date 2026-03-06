@@ -1,7 +1,7 @@
 # Assignment 4: Serverless API with Lambda, IAM, and API Gateway
 
 ## Objective
-This project demonstrates a hands-on, production-like serverless workflow on AWS. The goal was to build a simple REST API that accepts a `POST` request, processes it with a Lambda function, and stores the data in a DynamoDB table, following the principle of least privilege for IAM permissions.
+This Assignment demonstrates a hands-on, production-like serverless workflow on AWS. The goal was to build a simple REST API that accepts a `POST` request, processes it with a Lambda function, and stores the data in a DynamoDB table, following the principle of least privilege for IAM permissions.
 
 ## Architecture Diagram 
 

@@ -1,12 +1,12 @@
 #                      AWS Assignments
 
-This repository contains a collection of hands-on projects demonstrating core concepts in AWS cloud infrastructure, networking, security, and automation. Each project is self-contained in its own directory with a detailed README, configuration screenshots, and an architecture diagram.
+This repository contains a collection of hands-on Assignments demonstrating core concepts in AWS cloud infrastructure, networking, security, and automation. Each project is self-contained in its own directory with a detailed README, configuration screenshots, and an architecture diagram.
 
 ---
 
 ### Assignment 1: Custom VPC & Networking
 
-This Assignment involved building a custom Virtual Private Cloud (VPC) in AWS from the ground up. The primary objective was to create a secure, two-tier network architecture that isolates backend resources from the public internet while allowing controlled administrative access via a Bastion Host.
+In this assignment I created a custom VPC in AWS. The architecture separates public and private resources so backend services are protected from the internet, while administrative access is provided through a Bastion Host.
 
 ![Architecture Diagram for Assignment 1](./Assignment1/Architecture-diagram1.png)
 
@@ -16,7 +16,7 @@ This Assignment involved building a custom Virtual Private Cloud (VPC) in AWS fr
 
 ### Assignment 2: High-Availability Web Application with ALB
 
-This Assignment implements a highly available, two-tier web application architecture using an Application Load Balancer (ALB) to distribute traffic across two EC2 instances. The design isolates backend instances in private subnets for enhanced security and resilience.
+This Assignment implements a highly available, two-tier web application architecture using an Application Load Balancer to distribute traffic across two EC2 instances. The design isolates backend instances in private subnets for enhanced security and resilience.
 
 ![Architecture Diagram for Assignment 2](./Assignment2/Architecture-diagram-2.png)
 

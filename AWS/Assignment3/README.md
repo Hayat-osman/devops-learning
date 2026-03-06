@@ -2,7 +2,7 @@
 
 ### **Objective**
 
-This document outlines the deployment of a secure, scalable, and highly available static website using AWS infrastructure. The architecture leverages S3, CloudFront, and Route 53 to create a production-grade hosting solution.
+This assignment outlines the deployment of a secure, scalable, and highly available static website using AWS infrastructure. The architecture leverages S3, CloudFront, and Route 53 to create a production-grade hosting solution.
 
 ### **Architecture diagram**
 
