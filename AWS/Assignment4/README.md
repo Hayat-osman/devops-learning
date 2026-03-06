@@ -5,7 +5,7 @@ This project demonstrates a hands-on, production-like serverless workflow on AWS
 
 ## Architecture Diagram 
 
-![Architecture Diagram](/AWS/Assignment4/Architechture-diagram.png)
+![Architecture Diagram](/AWS/Assignment4/Architechture-diagram4.png)
 
 ---
 
