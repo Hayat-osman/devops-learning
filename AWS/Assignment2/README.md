@@ -12,7 +12,7 @@ This Assignment implements a highly available, two-tier web application architec
 
 A VPC was configured with public and private subnets to create a secure network boundary.
 
-**Subnets:** 2 Public and 2 Private subnets were created across  ‘eu-west-2a` and `eu-west-2b`.
+**Subnets:** 2 Public and 2 Private subnets were created across`eu-west-2a` and `eu-west-2b`
 
 ![VPC Resource Map](/AWS/Assignment2/Screenshot%20/Resourcemap.png)
 
@@ -22,8 +22,7 @@ A VPC was configured with public and private subnets to create a secure network 
 
 **Private Route Table:** Routes `0.0.0.0/0` traffic to a **NAT Gateway**. This table is associated with the private subnets, allowing the EC2 instances outbound internet access for updates without being publicly exposed.
 
-![Private Route Table]
-(/AWS/Assignment2/Screenshot%20/Privateroutetable-2.png)
+![Private Route Table](/AWS/Assignment2/Screenshot%20/Privateroutetable-2.png)
 
 ### 2.2 Security Groups
 
